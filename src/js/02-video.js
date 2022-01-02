@@ -10,3 +10,6 @@ function savedCurrentTime(e) {
 
 const throttleSavedCurrentime = throttle(savedCurrentTime, 1000);
 player.on('timeupdate', throttleSavedCurrentime);
+
+const currentTime = localStorage.getItem('videoplayer-current-time');
+player.setCurrentTime(currentTime);
